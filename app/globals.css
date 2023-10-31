@@ -43,6 +43,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #webgi-canvas-container {
+ 
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -50,9 +51,12 @@ body::-webkit-scrollbar-thumb {
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  top: 0;
+  top: -23px;
+  right: -507px;
   pointer-events: none;
   min-height: 831px;
+  background: transparent;
+  transform: scale(.65);
   background: transparent;
 }
 
@@ -184,10 +188,15 @@ nav .link-styled {
   color: #000000cc;
 }
 
+.jumbotron-section {
+  display: flex;
+  width: 100%;
+}
+
 .jumbotron-section.wrapper {
   margin-left: auto;
   margin-right: auto;
-  max-width: 980px;
+  max-width: 1280px;
   width: 100%;
   box-sizing: border-box;
   height: calc(100vh - 40px);

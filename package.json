@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gsap": "^3.12.2",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18",
@@ -18,10 +19,10 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-types-0.8.5.tgz",
     "eslint": "^8",
     "eslint-config-next": "14.0.0",
     "typescript": "^5",
-    "webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-0.8.5.tgz",
-	"@types/webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-types-0.8.5.tgz"
+    "webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-0.8.5.tgz"
   }
 }

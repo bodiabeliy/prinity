@@ -1,6 +1,8 @@
 
 "use client"
 
+import WebGiViewver from "@/widgets/WebGiViewver";
+
 const MainInfoScreen = () => {
 
   const ExploreMore = () => {
@@ -20,9 +22,7 @@ const MainInfoScreen = () => {
                   <span className="description">Create your amazing 3-D visualization home! </span> 
                   <button onClick={ExploreMore} className="button">Explore more</button>
                 </div>
-                <div className="main-3dmodel">
-                sdfgf
-                </div>
+                <WebGiViewver />
               </div>
             </section>
         </>
