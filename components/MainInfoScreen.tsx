@@ -6,7 +6,7 @@ import WebGiViewver from "@/widgets/WebGiViewver";
 const MainInfoScreen = () => {
 
   const ExploreMore = () => {
-    const element =document.querySelector(".sound-section");
+    const element =document.querySelector(".benefits-section");
      window.scrollTo({
       top : element?.getBoundingClientRect().top, 
       left : 0,
