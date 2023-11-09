@@ -4,8 +4,7 @@ const DescriptionScreen = () => {
             <div className="benefits-section wrapper"> 
                 <div className="body"> 
                     <div className="benefits-section-content content"> 
-                        <h2 className="title">New Sound System</h2> 
-                        <p className="text">Feel the base.</p> 
+                        <p className="text">Why you should choose us?</p> 
                         <span className="description"></span>
                     </div> 
                 </div> 

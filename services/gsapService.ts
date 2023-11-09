@@ -32,33 +32,5 @@ export const scroll3dAnimation = (cameraPosition:Vector3, target:Vector3, onUpda
                 scrub:3, // change model position,
                 immediateRender: false
             },
-        }),
-        timeline.to(".jumbotron-sectio",
-            { 
-                opacity:0,
-                x:-0.63,
-                y:0.2,
-                z:0.15,
-                scrollTrigger: {
-                    trigger:".benefits-section",
-                    start:"top bottom",
-                    end:"top top",
-                    scrub:3, // change model position,
-                    immediateRender: false
-                },
-        }),
-        timeline.to(".benefits-content",
-            { 
-                opacity:1,
-                x:-0.63,
-                y:0.2,
-                z:0.15,
-                scrollTrigger: {
-                    trigger:".benefits-section",
-                    start:"top bottom",
-                    end:"top top",
-                    scrub:3, // change model position,
-                    immediateRender: false
-                },
-        }) 
+        })
 }
