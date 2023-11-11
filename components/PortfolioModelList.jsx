@@ -11,7 +11,7 @@ import {
 import { useThree } from "@react-three/fiber";
 import { useControls } from "leva";
 import { useEffect, useRef, useState } from "react";
-import { Scene } from "./Scene";
+import { Scene } from "../widgets/Scene";
 import { slideAtom } from "./Overlay";
 
 export const scenes = [
@@ -135,6 +135,8 @@ export default function PortfolioModelList() {
       max: 10,
     },
   });
+
+
   return (
     <>
       <ambientLight intensity={0.2} />
@@ -152,7 +154,7 @@ export default function PortfolioModelList() {
           position-y={viewport.height / 2 + 1.5}
         >
           <boxGeometry />
-          <MeshDistortMaterial color={scenes[0].mainColor} speed={3} />
+          <MeshDistortMaterial color={scenes[1].mainColor} speed={3} />
         </mesh>
 
         <Dodecahedron

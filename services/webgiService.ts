@@ -41,7 +41,10 @@ export const setupWebGiViewer = async(canvasRef:HTMLCanvasElement |any) => {
         viewer.renderer.refreshPipeline();
 
     // download 3d model
-        await manager.addFromPath("./small_villa.glb"); 
+        // await manager.addFromPath("./small_villa.glb"); 
+        await  manager.addAsset({path:'./small_villa.glb'})
+        
+
 
     // remove scene background
         viewer.getPlugin<any>(TonemapPlugin).config.clipBackground = true

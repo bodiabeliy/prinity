@@ -25,11 +25,13 @@ export default function Overlay () {
   const listenToScroll = () => {
     const element =document.querySelector(".portfolio-section__overlay");
     let heightToShowFrom = 1300;
+    let heightToHideAfter = 2000;
+
     const winScroll = document.body.scrollTop || 
     document.documentElement.scrollTop;
     setHeight(winScroll);
 
-    if (winScroll > heightToShowFrom) { 
+    if (winScroll > heightToShowFrom && winScroll < heightToHideAfter) { 
       element.classList.add("show") 
          isVisible && setIsVisible(false);
     } else {
@@ -51,6 +53,25 @@ export default function Overlay () {
       setVisible(true);
     }, 2600);
   }, [slide]);
+
+
+  const MoveUp = () => {
+    const element =document.querySelector(".benefits-section");
+     window.scrollTo({
+      top : element?.getBoundingClientRect().top, 
+      left : 0,
+      behavior : "smooth"
+    })
+  }
+
+  const MoveDown = () => {
+    console.log("down");
+     window.scrollTo({
+      top : 2600, 
+      left : 0,
+      behavior : "smooth"
+    })
+  }
   return (
     <div div className="portfolio-section__overlay">
       <div
@@ -58,6 +79,15 @@ export default function Overlay () {
           visible ? "" : "opacity-0"
         } transition-opacity duration-1000`}
       >
+        <div className="actions-btns absolute right-0 pointer-events-auto">
+          <div className="actions-btn up" >
+          <svg onClick={() => MoveUp()} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+          </div>
+          <div className="actions-btn down">
+          <svg onClick={() =>MoveDown()} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+            <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+          </div>
+        </div>
         <svg
           className="w-40 mx-auto mt-8"
           viewBox="0 0 342 35"
