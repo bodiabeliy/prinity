@@ -465,6 +465,7 @@ nav .link-styled {
   transform: rotate(180deg);
 }
 .team-section {
+  margin-top: 50px;
   display: flex;
   width: 100%;
 }

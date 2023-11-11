@@ -32,5 +32,31 @@ export const scroll3dAnimation = (cameraPosition:Vector3, target:Vector3, onUpda
                 scrub:3, // change model position,
                 immediateRender: false
             },
+        }),
+        timeline.to(target,
+        { 
+            x:-10,
+            y:0.2,
+            z:0.15,
+            scrollTrigger: {
+                trigger:".portfolio-section",
+                start:"top bottom",
+                end:"top top",
+                scrub:3, // change model position,
+                immediateRender: false
+            },
+        }),
+        timeline.to(target,
+        { 
+            x:-10,
+            y:0.2,
+            z:0.15,
+            scrollTrigger: {
+                trigger:".team-section",
+                start:"top bottom",
+                end:"top top",
+                scrub:3, // change model position,
+                immediateRender: false
+            },
         })
 }
