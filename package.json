@@ -1,5 +1,5 @@
 {
-  "name": "3d-portfolio",
+  "name": "3d-prinitylio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,11 +15,12 @@
     "@types/three": "0.152.1",
     "@types/webgl-ext": "^0.0.36",
     "gsap": "^3.12.2",
-    "leva": "^0.9.35",
     "jotai": "^2.4.2",
+    "leva": "^0.9.35",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "self": "^1.0.0",
     "three": "0.153.0",
     "webgi": "^0.0.1"
   },

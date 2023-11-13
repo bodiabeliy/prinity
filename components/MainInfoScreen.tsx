@@ -19,8 +19,8 @@ const MainInfoScreen = () => {
               <div className="jumbotron-section container">
                 <div className="main-text">
                   <p className="text">Let`s create future together!</p> 
-                  <span className="description">Create your amazing 3-D visualization home! </span> 
-                  <button onClick={ExploreMore} className="button">Explore more</button>
+                  <span className="description">Creating 3D visualization houses and cars for you! </span> 
+                  <button onClick={ExploreMore} className="button">More info</button>
                 </div>
                 <WebGiViewver />
               </div>
