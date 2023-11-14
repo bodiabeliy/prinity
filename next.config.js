@@ -2,8 +2,10 @@
 const nextConfig = {
     // transpilePackages: ['three'],
     experimental: {
-        appDir: false,
-      },
+      runtime: "experimental-edge",
+    },
+    reactStrictMode: true,
+    swcMinify: true,
 }
 
 

@@ -1,14 +1,16 @@
 "use client"
 
-import { setupWebGiViewer } from "@/services/webgiService";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 
 const WebGiViewver = () => {
     const canvasRef = useRef<HTMLCanvasElement |any>(null); 
-    const setupViewer = useCallback((setupWebGiViewer), []) 
 
     useEffect(() => {
-        setupViewer(canvasRef)
+        const init =async () => {
+          const {setupWebGiViewer}  = await import('@/services/webgiService');
+          setupWebGiViewer(canvasRef)
+        }
+        init()
     }, [])
 
     return ( 
