@@ -2,6 +2,8 @@
 "use client"
 
 import WebGiViewver from "@/widgets/WebGiViewver";
+import dynamic from "next/dynamic";
+
 
 const MainInfoScreen = () => {
 

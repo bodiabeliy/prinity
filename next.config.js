@@ -2,7 +2,7 @@
 const nextConfig = {
     // transpilePackages: ['three'],
     experimental: {
-        appDir: false,
+        appDir: "experimental",
         
       },
 }
