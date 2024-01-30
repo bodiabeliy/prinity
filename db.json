@@ -1,0 +1,21 @@
+{
+    "scenes": [
+        {
+          "path": "https://3d-models-bodiabeliy.s3.amazonaws.com/sandshoecottage.glb",
+          "mainColor": "#f9c0ff",
+          "name": "SandShoe Cottage",
+          "description":
+            "Your dream in our hands ",
+          "price": 2050000,
+          "range": 660
+        },
+        {
+          "path": "https://3d-models-bodiabeliy.s3.amazonaws.com/semi_scene.glb",
+          "mainColor": "#ffdec0",
+          "name": "Semi",
+          "description": "The Future of Trucking",
+          "price": 150000,
+          "range": 800
+        }
+      ]
+}
