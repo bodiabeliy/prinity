@@ -9,6 +9,7 @@ import TeamScreen from "@/components/TeamScreen";
 
 const DynamicMainInfoScreen = dynamic(() => import('@/components/MainInfoScreen'), { ssr: false })
 
+
 const MainPage = () => {
     return ( 
         <>
