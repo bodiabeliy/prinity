@@ -9,8 +9,9 @@ import {
   Sphere,
   useGLTF,
 } from "@react-three/drei";
-
-import * as THREE from "three";
+import { useLoader } from '@react-three/fiber'
+import {BackSide} from "three";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader'
 
 import React, { useEffect } from "react";
 import { DEG2RAD } from "three/src/math/MathUtils";
@@ -18,6 +19,7 @@ import { DEG2RAD } from "three/src/math/MathUtils";
 export const Scene = ({ mainColor, path, ...props }) => {
   const { nodes, materials, scene } = useGLTF(path);
   useEffect(() => {
+    
     scene.traverse((child) => {
       if (child.isMesh) {
         child.castShadow = true;
@@ -35,8 +37,8 @@ export const Scene = ({ mainColor, path, ...props }) => {
           autoRotate
           enablePan={false}
           maxPolarAngle={DEG2RAD * 75}
-          minDistance={4}
-          maxDistance={6}
+          minDistance={10}
+          maxDistance={50}
           autoRotateSpeed={0.5}
         />
         <primitive object={scene} scale={ratioScale} />
@@ -66,7 +68,7 @@ export const Scene = ({ mainColor, path, ...props }) => {
         </AccumulativeShadows>
         <Environment blur={0.8} background>
           <Sphere scale={15}>
-            <meshBasicMaterial color={mainColor} side={THREE.BackSide} />
+            <meshBasicMaterial color={mainColor} side={BackSide} />
           </Sphere>
           <Lightformer
             position={[5, 0, -5]}

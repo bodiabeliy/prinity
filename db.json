@@ -1,7 +1,7 @@
 {
     "scenes": [
         {
-          "path": "https://3d-models-bodiabeliy.s3.amazonaws.com/sandshoecottage.glb",
+          "path": "https://3d-models-bodiabeliy.s3.amazonaws.com/sandshoe.glb",
           "mainColor": "#f9c0ff",
           "name": "SandShoe Cottage",
           "description":
