@@ -17,7 +17,7 @@ import { Scene } from "../widgets/Scene";
 import { slideAtom } from "./Overlay";
 import { useDispatch, useSelector } from "react-redux";
 import {getScenesSelector} from "../providers/reducers/ScenesSlice"
-import { getScenes } from "@/services/Scenes";
+import { getScenes } from "@/services/ScenesService";
 
 
 
