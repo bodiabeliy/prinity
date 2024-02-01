@@ -36,7 +36,7 @@ const WebGiViewver = () => {
 
     // download 3d model
         // await manager.addFromPath("./small_villa.glb"); 
-        await  manager.addAsset({path:'https://3d-models-bodiabeliy.s3.amazonaws.com/small_villa.glb'})
+        await  manager.addAsset({path:'./small_villa.glb'})
         
 
 
