@@ -124,10 +124,9 @@ export default function PortfolioModelList() {
 
   return (
     <>
-    <Suspense>
     {scenes.length && (
         <>
-          <ambientLight intensity={0.2} />
+]        <ambientLight intensity={0.2} />
           <Environment preset={"city"} />
           <CameraHandler slideDistance={slideDistance} />
           {/* MAIN WORLD */}
@@ -182,7 +181,6 @@ export default function PortfolioModelList() {
           ))}
         </>
       )}
-    </Suspense>
     </>
   );
 }
