@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/public/loader.gif"
+import Logo from "@/public/dream-2.png"
 const Loader = () => {
     return ( 
         <>

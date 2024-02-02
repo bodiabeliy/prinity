@@ -12,7 +12,6 @@ const GLTFViewver = () => {
     <div className="portfolio-section">
       <Suspense fallback={
       <>
-      <h1>zxcccccccc</h1>
       </>
       }>
         <Leva hidden />

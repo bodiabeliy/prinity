@@ -508,6 +508,11 @@ nav .link-styled {
 }
 
 
+@media screen and (min-width: 1200px) {
+  .splashScreenOpen {
+    right: 0 !important;
+  }
+}
 
 @media screen and (max-width: 990px) {
   .jumbotron-section .iphone-img,
@@ -572,5 +577,8 @@ nav .link-styled {
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+  .splashScreenOpen {
+    right: none;
   }
 }

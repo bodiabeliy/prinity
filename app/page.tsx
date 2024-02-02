@@ -12,7 +12,7 @@ const DynamicMainInfoScreen = dynamic(() => import('@/components/MainInfoScreen'
 const MainPage = () => {
     return ( 
         <>
-            <Loader />
+            {/* <Loader /> */}
             <DynamicMainInfoScreen />
             <DescriptionScreen />
             <GLTFViewver />

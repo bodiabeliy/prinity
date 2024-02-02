@@ -1,10 +1,12 @@
 
 "use client"
 
+import Loader from "@/app/loading";
 import WebGiViewver from "@/widgets/WebGiViewver";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
 
+const DynamicWebGiViewver = dynamic(() => import('@/widgets/WebGiViewver'))
 const MainInfoScreen = () => {
 
 
@@ -25,7 +27,7 @@ const MainInfoScreen = () => {
                   <span className="description">Creating 3D visualization houses and cars for you! </span> 
                   <button onClick={ExploreMore} className="button">More info</button>
                 </div>
-                <WebGiViewver />
+                <DynamicWebGiViewver />
               </div>
             </section>
         </>
