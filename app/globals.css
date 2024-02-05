@@ -436,6 +436,7 @@ nav .link-styled {
   font-weight: 400;
   margin: 0 14px;
   cursor: pointer;
+  z-index: 10;
 }
 
 .portfolio-section {
@@ -510,6 +511,7 @@ nav .link-styled {
 
 @media screen and (min-width: 1200px) {
   .splashScreenOpen {
+    top: none;
     right: 0 !important;
   }
 }
@@ -567,7 +569,7 @@ nav .link-styled {
     flex-direction: column;
   }
   #webgi-canvas-container {
-    top: 190px;
+    top: 100px;
     right: -195px;
     background: transparent;
     transform: scale(.5);
@@ -580,5 +582,6 @@ nav .link-styled {
   }
   .splashScreenOpen {
     right: none;
+    top: 40px;
   }
 }

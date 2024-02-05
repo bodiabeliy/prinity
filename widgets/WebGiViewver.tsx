@@ -3,15 +3,17 @@
 import { scroll3dAnimation } from "@/services/gsapService";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AssetManagerBasicPopupPlugin, AssetManagerLoadingBarPlugin, AssetManagerPlugin, BloomPlugin, CanvasSnipperPlugin, GBufferPlugin, GammaCorrectionPlugin, LoadingScreenPlugin, ProgressivePlugin, SSAOPlugin, SSRPlugin, TonemapPlugin, ViewerApp, addBasePlugins } from "webgi";
-import Image from "next/image";
-import Logo from "@/public/dream-2.png"
+
+import { getIsLoaded3DModelSelector, setIsLoaded3DModel } from "@/providers/reducers/ScenesSlice";
+import { useDispatch, useSelector } from "react-redux";
+
+
 const WebGiViewver = () => {
     const canvasRef =useRef<HTMLCanvasElement |any>(null)
     const [is3dModelLoaded, setIs3dModelLoaded] = useState(false)
-    console.log("isload after", is3dModelLoaded);
-
+    const isLoadedMainModel = useSelector(getIsLoaded3DModelSelector)
+    const dispatch = useDispatch()
     // Initialize the viewer 
-
     const memorizedPosition = useCallback((position:any, target:any, onUpdate:any) => {
         if (position && target && onUpdate) {
             scroll3dAnimation(position, target, onUpdate)
@@ -81,7 +83,6 @@ const WebGiViewver = () => {
         // await viewer.addPlugin<any>(SSRPlugin)
         // await viewer.addPlugin<any>(SSAOPlugin)
         // await viewer.addPlugin<any>(BloomPlugin)
-       
 
         let needForUpdate = true;
         const onUpdate = () => {
@@ -97,11 +98,13 @@ const WebGiViewver = () => {
                 }
             })
             memorizedPosition(position, target, onUpdate)
-                setIs3dModelLoaded(!is3dModelLoaded)
+            setIs3dModelLoaded(!is3dModelLoaded)
     }, [])
 
     useEffect(() => {
         setupViewer()
+        dispatch(setIsLoaded3DModel(true))
+
     }, [])
 
 
@@ -109,7 +112,7 @@ const WebGiViewver = () => {
 
     return ( 
         <>
-            <div id="webgi-canvas-container" className={!is3dModelLoaded?"splashScreenOpen":""} style={{transform:!is3dModelLoaded?"scale(2)":"scale(.5)"}}>
+            <div id="webgi-canvas-container" className={!is3dModelLoaded?"splashScreenOpen":""} style={{transform:!is3dModelLoaded?"scale(2)":"scale(.5)", zIndex:1}}>
                 <canvas id="webgi-canvas" ref={canvasRef} />
             </div>
         </>

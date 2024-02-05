@@ -6,10 +6,12 @@ import http from '../../services/api/index';
 
 export interface SceneState {
   scenes:any[]
+  isLoadedMain3DModel:boolean
 }
 
 const initialState: SceneState = {
   scenes:[],
+  isLoadedMain3DModel:false
 }
 
 export const scenesState = createSlice({
@@ -20,14 +22,18 @@ export const scenesState = createSlice({
     gettingScenessSuccess: (state, action: PayloadAction<any[]>) => {      
       state.scenes = action.payload
     },
+    setIsLoaded3DModel: (state, action: PayloadAction<boolean>) => {      
+      state.isLoadedMain3DModel = action.payload
+    },
 
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { gettingScenessSuccess} = scenesState.actions
+export const { gettingScenessSuccess, setIsLoaded3DModel} = scenesState.actions
 
 export const getScenesSelector = (state:RootState) => state.ScenesReducer.scenes
+export const getIsLoaded3DModelSelector = (state:RootState) => state.ScenesReducer.isLoadedMain3DModel
 
 
 

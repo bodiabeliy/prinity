@@ -2,13 +2,20 @@
 "use client"
 
 import Loader from "@/app/loading";
+import { getIsLoaded3DModelSelector } from "@/providers/reducers/ScenesSlice";
 import WebGiViewver from "@/widgets/WebGiViewver";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
-const DynamicWebGiViewver = dynamic(() => import('@/widgets/WebGiViewver'))
+const DynamicWebGiViewver = dynamic(() => import('@/widgets/WebGiViewver'), 
+  // {
+  //   loading: () => <Loader />,
+  // }
+)
 const MainInfoScreen = () => {
-
+  const isLoadedMainModel = useSelector(getIsLoaded3DModelSelector)
+  console.log("isLoadedMainModel", isLoadedMainModel);
 
   const ExploreMore = () => {
     const element =document.querySelector(".benefits-section");
@@ -22,11 +29,14 @@ const MainInfoScreen = () => {
         <>
             <section className="jumbotron-section wrapper">
               <div className="jumbotron-section container">
-                <div className="main-text">
-                  <p className="text title">Let`s create future together!</p> 
-                  <span className="description">Creating 3D visualization houses and cars for you! </span> 
-                  <button onClick={ExploreMore} className="button">More info</button>
-                </div>
+                {isLoadedMainModel == true &&(
+                   <div className="main-text">
+                   <h1 className="text title">Let`s create future together!</h1> 
+                   <span className="description">Making 3D visualization sweety houses for you!</span> 
+                   <button onClick={ExploreMore} className="button">More info</button>
+                 </div>
+                )}
+               
                 <DynamicWebGiViewver />
               </div>
             </section>
