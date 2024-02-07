@@ -10,6 +10,7 @@ import FeedBackScreen from "@/components/FeedBackScreen";
 
 
 const DynamicMainInfoScreen = dynamic(() => import('@/components/MainInfoScreen'), { ssr: false })
+const DynamicFeedBackScreen = dynamic(() => import('@/components/FeedBackScreen'), { ssr: false })
 
 
 const MainPage = () => {
@@ -23,7 +24,7 @@ const MainPage = () => {
                     <DescriptionScreen />
                     <GLTFViewver />
                     <TeamScreen />
-                    <FeedBackScreen />
+                    <DynamicFeedBackScreen />
                   </>
                 )
             }
