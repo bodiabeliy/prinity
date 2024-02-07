@@ -11,9 +11,7 @@ const DynamicMainInfoScreen = dynamic(() => import('@/components/MainInfoScreen'
 
 
 const MainPage = () => {
-    const isLoadedMainModel = useSelector(getIsLoaded3DModelSelector)
-    console.log("isLoadedMainModel", isLoadedMainModel);
-    
+    const isLoadedMainModel = useSelector(getIsLoaded3DModelSelector)    
     return ( 
         <>
             <DynamicMainInfoScreen />

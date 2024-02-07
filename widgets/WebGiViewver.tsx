@@ -104,7 +104,6 @@ const WebGiViewver = () => {
     useEffect(() => {
         setupViewer()
         dispatch(setIsLoaded3DModel(true))
-
     }, [])
 
 
