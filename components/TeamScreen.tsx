@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import JohnStonn from "@/public/John Stonn.jpg";
 import LiaTarasenko from "@/public/Lia Tarasenko.jpg";
