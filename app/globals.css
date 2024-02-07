@@ -351,22 +351,25 @@ nav .link-styled {
   justify-content: center;
 }
 
-.benefits-section.wrapper {
+.benefits-section.wrapper,
+.feedback-section.wrapper {
   width: 100%;
   color: #1d1d1f;
   background-color: #fbfbfd;
   height: 100vh;
 }
 
-.benefits-section .body {
+.benefits-section .body,
+.feedback-section .body {
   max-width: 1180px;
   margin: 0 auto;
 }
 
-.benefits-section .content {
+.benefits-section .content,
+.feedback-section .content {
   max-width: 490px;
   width: 100%;
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   display: flex;
   align-items: left;
   flex-direction: column;
@@ -380,7 +383,8 @@ nav .link-styled {
   margin-bottom: 0;
 }
 
-.benefits-section .text {
+.benefits-section .text,
+.feedback-section .text {
   display: inline-block;
   color: transparent;
   background-image: linear-gradient(
@@ -567,7 +571,8 @@ nav .link-styled {
 
   .jumbotron-section.wrapper,
   .benefits-section.wrapper,
-  .display-section.wrapper {
+  .display-section.wrapper,
+  .feedback-section.wrapper {
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
@@ -626,4 +631,13 @@ nav .link-styled {
   .team-section.wrapper >.team-section_card {
     transform: translateY(-40px);
   }
+}
+
+/* custome file */
+
+form  {
+  display: none !important;
+}
+.replyBtn {
+  display: none !important;
 }
