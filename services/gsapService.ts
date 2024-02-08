@@ -37,22 +37,25 @@ export const scroll3dAnimation = (cameraPosition:Vector3, target:Vector3, onUpda
         }),
         timeline.to(target,
         { 
-            x:-10,
-            y:0.2,
-            z:0.15,
+            x:-110,
+            y:34.2,
+            z:32.15,
+            autoAlpha:0,
             scrollTrigger: {
                 trigger:".portfolio-section",
                 start:"top bottom",
                 end:"top top",
                 scrub:0.5, // change model position,
-                immediateRender: false
+                immediateRender: false,
+
             },
         }),
         timeline.to(target,
         { 
-            x:-10,
+            x:-110,
             y:0.2,
             z:0.15,
+            autoAlpha:0,
             scrollTrigger: {
                 trigger:".team-section",
                 start:"top bottom",
