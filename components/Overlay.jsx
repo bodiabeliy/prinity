@@ -8,6 +8,8 @@ export const slideAtom = atom(0);
 
 
 export default function Overlay () {
+  const extraSmallScreen = window.matchMedia( '(max-width : 768px)').matches;
+
 
   const scenes = useSelector(getScenesSelector)
 
@@ -68,7 +70,7 @@ export default function Overlay () {
 
   const MoveDown = () => {
      window.scrollTo({
-      top : 2600, 
+      top : extraSmallScreen? (screen.height <700?2070:screen.height <900?2700:2900):2250, 
       left : 0,
       behavior : "smooth"
     })

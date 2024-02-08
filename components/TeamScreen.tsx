@@ -1,27 +1,31 @@
 "use client";
 import Image from "next/image";
-import JohnStonn from "@/public/John Stonn.jpg";
-import LiaTarasenko from "@/public/Lia Tarasenko.jpg";
-import MargaretAdam from "@/public/Maratett Adam.jpg";
-import LuisSaren from "@/public/Luis Saren.jpg";
-import RobertCoperski from "@/public/Robert Coperski.jpg";
-import Portfolio from "@/public/portfolio.jpg";
+
+import mobilePhotoPortfolio from "@/public/portfolio-2-1.png";
+import desktopPhotoPortfolio from "@/public/portfolio-3.jpg";
+
 import Link from "next/link";
 
 const TeamScreen = () => {
+  const mobilePhoto = window.matchMedia( '(max-width : 768px)').matches;
+
   return (
     <>
-      <div className="team-section flex flex-col">
+      <div className="team-section flex flex-col" id="team-section">
         <h1 className="text title text-center m-auto"> So, who I am? </h1>
         <div className="team-section wrapper">
           <div className="team-section_card max-w-sm w-full lg:max-w-full lg:flex">
             <div
-              className=" h-60 w-60 lg:w-[300px] lg:h-[100%] m-auto lg:m-[0px] flex-none sm:border-full text-centlg:none bg-cover rounded-full lg:rounded-none overflow-hidden bg-grey"
-              style={{ backgroundImage: `url(${Portfolio})` }}
-            >
-              <Image className="sm:ml-none lg:ml-3" src={Portfolio} alt={""} />
+              className=" h-40 w-40 lg:w-[300px] lg:h-[100%] m-auto lg:m-[0px] flex-none sm:border-full text-centlg:none bg-cover rounded-full lg:rounded-none overflow-hidden bg-grey"
+           >
+              {mobilePhoto ?
+              <Image className="sm:ml-none lg:ml-3" src={mobilePhotoPortfolio} alt={""} />
+              :
+              <Image className="sm:ml-none lg:ml-3" src={desktopPhotoPortfolio} alt={""} />
+              }
+              
             </div>
-            <div className="m-3 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col max-[420px]:justify-between  min-[1100px]:justify-start leading-normal">
+            <div className="m-1 rounded-b lg:rounded-b-none lg:rounded-r p-1 flex flex-col max-[440px]:justify-between  min-[1100px]:justify-start leading-normal">
               <h2 className="text-center font-bold text-2xl">
                 I`m Bohdan,{" "}
                 <span className="team-section_subTitle text-3xl">
@@ -29,8 +33,9 @@ const TeamScreen = () => {
                   Architecture Visualizer
                 </span>
               </h2>
+              <div className="mobile-scroll max-[376px]:overflow-y-scroll	max-[376px]:max-h-[490px]">
               <h3 className="font-bold ">My history:</h3>
-              <div className="mobile-scroll max-[376px]:overflow-y-scroll	max-[376px]:max-h-[135px]">
+
                 <ol>
                   <li>
                     <b>1) </b>I was engaged in development (near 3 years) of different kinds of
@@ -57,9 +62,7 @@ const TeamScreen = () => {
                   </li>
                 </ol>
                 <div className="mt-3 flex flex-col">
-                  <hr />
-                  <h2 className="text-2xl font-bold">Contact with me:</h2>
-                  <div className="social flex w-full max-[420px]:justify-between min-[1100px]:justify-around">
+                  <div className="social flex w-full max-[440px]:justify-between min-[1100px]:justify-around">
                     <Link href={"https://t.me/Blessed_generation"}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

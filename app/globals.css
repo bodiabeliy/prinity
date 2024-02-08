@@ -508,7 +508,7 @@ nav .link-styled {
   height: 91.5%;
   border-radius: 20px;
   background: repeating-conic-gradient(from var(--dynamicDeg), #d2e884, #95e096, #5bd3ad, #1fc2c0, #14afc9);
-  animation:rotating-cycle 4s linear infinite;
+  animation:rotating-cycle 3s linear infinite;
 }
 
 .team-section.wrapper::after {
@@ -518,7 +518,7 @@ nav .link-styled {
   height: 91.5%;
   border-radius: 20px;
   background: repeating-conic-gradient(from var(--dynamicDeg), #d2e884, #95e096, #5bd3ad, #1fc2c0, #14afc9);
-  animation:rotating-cycle 4s linear infinite;
+  animation:rotating-cycle 3s linear infinite;
   filter: blur(50px);
   opacity: 0.7;
 }
