@@ -1,8 +1,12 @@
 "use client"
 import { atom, useAtom } from "jotai";
 import { useEffect, useState } from "react";
+
 import { useSelector } from "react-redux";
 import {getScenesSelector} from "../providers/reducers/ScenesSlice"
+
+import Modal from "@/shared/Modal/Modal";
+import SlideShow from "@/widgets/SlideShow"
 
 export const slideAtom = atom(0);
 
@@ -19,6 +23,8 @@ export default function Overlay () {
 
   const [isVisible, setIsVisible] = useState(true);
   const [height, setHeight] = useState(0)
+  const [show, setShow] = useState(false);
+  const [active, setActive] = useState(0);
   
   useEffect(() => {   
     window.addEventListener("scroll", listenToScroll);
@@ -75,8 +81,18 @@ export default function Overlay () {
       behavior : "smooth"
     })
   }
+
+  const handleClick = (index) => {
+    setActive(index);
+    setShow(true);
+  };
+
+  const onClose = () => {
+    setShow(false);
+  };
   return (
     <div div className="portfolio-section__overlay">
+        <SlideShow images={scenes[displaySlide]?.photos} modelData={scenes[displaySlide]} isOpen={show} onClose={onClose}/>
       <div
         className={`fixed z-10 top-0 left-0 bottom-0 right-0 flex flex-col justify-between pointer-events-none text-black ${
           visible ? "" : "opacity-0"
@@ -84,7 +100,7 @@ export default function Overlay () {
       >
         <div className="actions-btns absolute right-0 pointer-events-auto z-3">
           <div className="actions-btn up" >
-          <svg onClick={() => MoveUp()} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+          <svg onClick={() => MoveUp()} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fil l-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
           </div>
           <div className="actions-btn down">
           <svg onClick={() =>MoveDown()} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
@@ -138,7 +154,7 @@ export default function Overlay () {
             />
           </svg>
         </div>
-        <div className="pt-20 pb-10 p-4 flex items-center flex-col text-center">
+        <div className="pt-5 pb-10 p-4 flex items-center flex-col text-center">
           <h1 className="text-5xl font-extrabold">
             {scenes[displaySlide]?.name}
           </h1>
@@ -146,50 +162,7 @@ export default function Overlay () {
             {scenes[displaySlide]?.description}
           </p>
           <div className="flex items-center gap-12 mt-10">
-            <div className="flex flex-col items-center">
-              <div className="flex gap-2 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
-                  />
-                </svg>
-                <p className="font-semibold text-3xl">
-                  ${scenes[displaySlide]?.price.toLocaleString()}
-                </p>
-              </div>
-              <p className="text-sm opacity-80">After Federal Tax Credit</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5H18V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z"
-                  />
-                </svg>
-                <p className="font-semibold text-3xl">
-                  {scenes[displaySlide]?.range}m<sup>2</sup>
-                </p>
-              </div>
-              <p className="text-sm opacity-80">Total square</p>
-            </div>
+            <button onClick={() => handleClick(scenes[displaySlide]?.photos)} className="portfolio-section__button-mobile border-2 border-black rounded-3xl p-3 pointer-events-auto">Gallery</button>
           </div>
         </div>
       </div>

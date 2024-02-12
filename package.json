@@ -29,7 +29,8 @@
     "react-redux": "^8.1.2",
     "three": "0.153.0",
     "uuid": "^9.0.1",
-    "webgi": "^0.0.1"
+    "webgi": "^0.0.1",
+    "yet-another-react-lightbox": "^3.17.0"
   },
   "devDependencies": {
     "@types/node": "^20",

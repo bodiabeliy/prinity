@@ -635,9 +635,7 @@ nav .link-styled {
 
 /* custome file */
 
-form  {
-  display: none !important;
-}
-.replyBtn {
-  display: none !important;
+
+.yarl__slide.yarl__slide_current.yarl__flex_center {
+  flex-direction: column;
 }

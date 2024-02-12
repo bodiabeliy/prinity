@@ -1,11 +1,19 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    // transpilePackages: ['three'],
-    experimental: {
-        appDir: "experimental",
-        
-      },
-}
 
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '/',
+        port: '',
+      }
+    ],
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
+}
 
 module.exports = nextConfig
