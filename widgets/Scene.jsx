@@ -27,8 +27,9 @@ export const Scene = ({ mainColor, path, ...props }) => {
           autoRotate
           enablePan={false}
           maxPolarAngle={DEG2RAD * 75}
-          minDistance={10}
+          minDistance={5}
           maxDistance={50}
+          maxZoom={10}
           autoRotateSpeed={0.5}
         />
         <primitive object={scene} scale={ratioScale} />

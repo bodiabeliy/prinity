@@ -154,7 +154,7 @@ export default function Overlay () {
             />
           </svg>
         </div>
-        <div className="pt-5 pb-10 p-4 flex items-center flex-col text-center">
+        <div className="pt-5 pb-20 p-4 flex items-center flex-col text-center">
           <h1 className="text-5xl font-extrabold">
             {scenes[displaySlide]?.name}
           </h1>
@@ -162,7 +162,7 @@ export default function Overlay () {
             {scenes[displaySlide]?.description}
           </p>
           <div className="flex items-center gap-12 mt-10">
-            <button onClick={() => handleClick(scenes[displaySlide]?.photos)} className="portfolio-section__button-mobile border-2 border-black rounded-3xl p-3 pointer-events-auto">Gallery</button>
+            <button onClick={() => handleClick(scenes[displaySlide]?.photos)} className="portfolio-section__button-mobile border-2 border-black rounded-3xl p-3 pointer-events-auto  hover:bg-black  hover:text-white">show gallery</button>
           </div>
         </div>
       </div>

@@ -250,7 +250,7 @@ nav .link-styled {
   align-items: flex-end;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 440px) {
   .jumbotron-section .text {
     font-size: 48px;
     font-weight: 800;
@@ -608,7 +608,7 @@ nav .link-styled {
 
 /* mobile */
 
-@media screen and (max-width:420px){
+@media screen and (max-width:440px){
   .jumbotron-section.container {
     flex-direction: column;
   }
@@ -638,4 +638,19 @@ nav .link-styled {
 
 .yarl__slide.yarl__slide_current.yarl__flex_center {
   flex-direction: column;
+}
+@media screen and (max-width:440px){
+  .yarl__slide_image {
+    max-width: min(1920px, 100%);
+  }
+}
+@media screen and (min-width:440px){
+  .yarl__slide_image {
+    max-width: min(1920px, 60%) !important;
+  }
+}
+
+form,
+.replyBtn {
+  display: none !important;
 }

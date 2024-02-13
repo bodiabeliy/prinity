@@ -91,7 +91,7 @@ const TeamScreen = () => {
                       </svg>
                     </Link>
                     <Link
-                      href={"www.linkedin.com/in/bohdan-bielashenok-3137ab1bb"}
+                      href={"https://www.linkedin.com/in/bohdan-bielashenok-3137ab1bb"}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

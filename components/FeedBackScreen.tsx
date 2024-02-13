@@ -27,7 +27,7 @@ const FeedBackScreen = () => {
       <div className="feedback-section wrapper">
         <div className="body">
           <div className="feedback-section-content content">
-            <p className="text">What feedback is hear?</p>
+            <p className="text">Customer`s review</p>
             <span className="description"></span>
             <div className="">
               <CommentSection

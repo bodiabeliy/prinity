@@ -9,7 +9,6 @@ import SlideDescription from "./SlideDescription";
 
 
 const SlideShow = ({ images, modelData, isOpen, onClose }: any) => {  
-  console.log("modelData", modelData);
   
   const slides = images?.map((photo:any) => {
     return {
