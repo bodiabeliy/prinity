@@ -126,7 +126,7 @@ export default function PortfolioModelList() {
     <>
     {scenes.length && (
         <>
-]        <ambientLight intensity={0.2} />
+        <ambientLight intensity={0.2} />
           <Environment preset={"city"} />
           <CameraHandler slideDistance={slideDistance} />
           {/* MAIN WORLD */}
@@ -173,7 +173,7 @@ export default function PortfolioModelList() {
               <planeGeometry args={[viewport.width, viewport.height]} />
               <meshBasicMaterial toneMapped={false}>
                 <RenderTexture attach="map">
-                  {/* <Scene {...scene} /> */}
+                  <Scene {...scene} />
                 </RenderTexture>
               </meshBasicMaterial>
             </mesh>
