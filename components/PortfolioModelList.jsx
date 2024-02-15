@@ -173,7 +173,7 @@ export default function PortfolioModelList() {
               <planeGeometry args={[viewport.width, viewport.height]} />
               <meshBasicMaterial toneMapped={false}>
                 <RenderTexture attach="map">
-                  <Scene {...scene} />
+                  {/* <Scene {...scene} /> */}
                 </RenderTexture>
               </meshBasicMaterial>
             </mesh>
