@@ -18,7 +18,7 @@ const GLTFViewver = () => {
         <DynamicOverlay />
         <Canvas shadows camera={{ position: [0, 0, 5], fov: 30 }}>
           <color attach="background" args={["#ececec"]} />
-            <DynamicPortfolioModelList />
+            {/* <DynamicPortfolioModelList /> */}
         </Canvas>
       </Suspense>
      
