@@ -446,7 +446,13 @@ nav .link-styled {
 }
 .portfolioPreloader__image {
   filter: invert();
-  margin: 500px auto;
+  position: relative;
+}
+.portfolioPreloader__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 400px;
 }
 .portfolio-section {
   z-index: 3;

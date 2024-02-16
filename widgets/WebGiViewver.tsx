@@ -36,7 +36,7 @@ const WebGiViewver = () => {
         await viewer.addPlugin<any>(LoadingScreenPlugin).then((s) => {
             s.background= "black"
             s.textColor = "white"
-            s.loadingTextHeader="data is loading..."
+            s.loadingTextHeader="Please wait..."
             s.backgroundBlur =0
             s.backgroundOpacity =1
             s.showFileNames =false
