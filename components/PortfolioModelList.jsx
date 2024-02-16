@@ -108,7 +108,6 @@ const CameraHandler = ({ slideDistance }) => {
 export default function PortfolioModelList() {
   const scenes = useSelector(getScenesSelector)
   const dispatch = useDispatch()
-  console.log("scenes", scenes);
   const viewport = useThree((state) => state.viewport);
   const { slideDistance } = useControls({
     slideDistance: {

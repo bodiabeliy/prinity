@@ -444,7 +444,10 @@ nav .link-styled {
   cursor: pointer;
   z-index: 10;
 }
-
+.portfolioPreloader__image {
+  filter: invert();
+  margin: 500px auto;
+}
 .portfolio-section {
   z-index: 3;
   height: 100vh;
