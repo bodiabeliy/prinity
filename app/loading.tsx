@@ -6,7 +6,7 @@ const Loader = () => {
         <div className="loader">
            <div className="loaderImage">
                 <Image className="logo" src={Logo} alt={""} />
-                <span className="loaderText">Data is loading...</span>
+                <span className="loaderText">Please wait...</span>
            </div>
         </div>
         </>
