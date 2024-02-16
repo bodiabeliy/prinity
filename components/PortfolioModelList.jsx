@@ -17,7 +17,6 @@ import { Scene } from "../widgets/Scene";
 import { slideAtom } from "./Overlay";
 import { useDispatch, useSelector } from "react-redux";
 import {getScenesSelector} from "../providers/reducers/ScenesSlice"
-import { getScenes } from "@/services/ScenesService";
 
 
 
@@ -107,7 +106,6 @@ const CameraHandler = ({ slideDistance }) => {
 
 export default function PortfolioModelList() {
   const scenes = useSelector(getScenesSelector)
-  const dispatch = useDispatch()
   const viewport = useThree((state) => state.viewport);
   const { slideDistance } = useControls({
     slideDistance: {
@@ -117,9 +115,7 @@ export default function PortfolioModelList() {
     },
   });
 
-  useEffect(() => {
-    getScenes(dispatch)
-  }, [])
+
 
   return (
     <>
