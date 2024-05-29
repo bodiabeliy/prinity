@@ -33,14 +33,17 @@ const WebGiViewver = () => {
             // await viewer.addPlugin<any>(AssetManagerBasicPopupPlugin)
 
         // preloader screen
-        await viewer.addPlugin<any>(LoadingScreenPlugin).then((s) => {
+        await viewer.addPlugin<any>(LoadingScreenPlugin).then((s) => {            
             s.background= "black"
             s.textColor = "white"
             s.loadingTextHeader="Please wait..."
             s.backgroundBlur =0
             s.backgroundOpacity =1
-            s.showFileNames =false
-            s.logoImage="https://3d-models-bodiabeliy.s3.amazonaws.com/logo-2.gif"
+            s.showFileNames =true
+            s.showProgress = true
+            s.showProgressStates = false
+
+            s.logoImage="https://3d-models-bodiabeliy.s3.amazonaws.com/DIM+token+logo.png"
             
             
             return s

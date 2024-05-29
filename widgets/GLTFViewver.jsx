@@ -33,16 +33,19 @@ const GLTFViewver = () => {
           <PortfolioPreloader />
         ) : (
           <>
-            <Leva hidden />
+
+            {/* <Leva hidden /> */}
             <DynamicOverlay />
-            <Canvas
+            <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/5jzXL?logo=1&info=1&fs=1&vr=0&zoom=1&autorotate=0.24&thumbs=1"></iframe>
+
+            {/* <Canvas
               shadows
               camera={{ position: [0, 0, 5], fov: 30 }}
               children={<></>}
             >
               <color attach="background" args={["#ececec"]} />
               <DynamicPortfolioModelList />
-            </Canvas>
+            </Canvas> */}
           </>
         )}
       </Suspense>
