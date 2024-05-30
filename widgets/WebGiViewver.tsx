@@ -43,7 +43,7 @@ const WebGiViewver = () => {
             s.showProgress = false
             s.showProgressStates = false
 
-            s.logoImage="https://3d-models-bodiabeliy.s3.amazonaws.com/DIM+logo.png"
+            s.logoImage="https://3d-models-bodiabeliy.s3.amazonaws.com/animate+logo_1.gif"
             
             
             return s
