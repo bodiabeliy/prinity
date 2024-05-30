@@ -27,6 +27,7 @@
     "react-comments-section": "^2.0.10",
     "react-dom": "^18",
     "react-redux": "^8.1.2",
+    "react-responsive-carousel": "^3.2.23",
     "three": "0.153.0",
     "uuid": "^9.0.1",
     "webgi": "^0.0.1",

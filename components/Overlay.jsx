@@ -98,6 +98,12 @@ export default function Overlay () {
           visible ? "" : "opacity-0"
         } transition-opacity duration-1000`}
       >
+         <div className="actions-btns absolute left-0 pointer-events-auto z-3">
+          <div className="actions-btn up" >
+          {/* <svg onClick={() => MoveUp()} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fil l-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
+          </div>
+          
+        </div>
         <div className="actions-btns absolute right-0 pointer-events-auto z-3">
           <div className="actions-btn up" >
           <svg onClick={() => MoveUp()} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fil l-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
@@ -118,7 +124,7 @@ export default function Overlay () {
           ></path> */}
         </svg>
         <div className="absolute top-0 bottom-0 left-0 right-0 flex-1 flex items-center justify-between p-4">
-          <svg
+          {/* <svg
             onClick={() =>
               setSlide((prev) => (prev > 0 ? prev - 1 : scenes.length - 1))
             }
@@ -134,9 +140,9 @@ export default function Overlay () {
               strokeLinejoin="round"
               d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
             />
-          </svg>
+          </svg> */}
 
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -152,17 +158,17 @@ export default function Overlay () {
               strokeLinejoin="round"
               d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
             />
-          </svg>
+          </svg> */}
         </div>
         <div className="pt-5 pb-20 p-4 flex items-center flex-col text-center">
           <h1 className="text-5xl font-extrabold">
-            {scenes[displaySlide]?.name}
+            {/* {scenes[displaySlide]?.name} */}
           </h1>
           <p className="text-opacity-60 italic">
-            {scenes[displaySlide]?.description}
+            {/* {scenes[displaySlide]?.description} */}
           </p>
           <div className="flex items-center gap-12 mt-10">
-            <button onClick={() => handleClick(scenes[displaySlide]?.photos)} className="portfolio-section__button-mobile border-2 border-black rounded-3xl p-3 pointer-events-auto  hover:bg-black  hover:text-white">show gallery</button>
+            {/* <button onClick={() => handleClick(scenes[displaySlide]?.photos)} className="portfolio-section__button-mobile border-2 border-black rounded-3xl p-3 pointer-events-auto  hover:bg-black  hover:text-white">show gallery</button> */}
           </div>
         </div>
       </div>

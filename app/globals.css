@@ -663,3 +663,12 @@ form,
 .replyBtn {
   display: none !important;
 }
+
+div.info-btn {
+  display: none !important;
+}
+
+.carousel .slide iframe {
+  margin: 0 !important;
+  width: 100% !important;
+}
