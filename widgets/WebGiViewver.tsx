@@ -39,11 +39,11 @@ const WebGiViewver = () => {
             s.loadingTextHeader="Please wait..."
             s.backgroundBlur =0
             s.backgroundOpacity =1
-            s.showFileNames =true
-            s.showProgress = true
+            s.showFileNames =false
+            s.showProgress = false
             s.showProgressStates = false
 
-            s.logoImage="https://3d-models-bodiabeliy.s3.amazonaws.com/DIM+token+logo.png"
+            s.logoImage="https://3d-models-bodiabeliy.s3.amazonaws.com/DIM+logo.png"
             
             
             return s
