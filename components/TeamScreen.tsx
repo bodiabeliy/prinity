@@ -12,6 +12,10 @@ const TeamScreen = () => {
   return (
     <>
       <div className="team-section flex flex-col" id="team-section">
+      <iframe width={mobilePhoto ?"100%":"0"} height="315" style={{display:mobilePhoto ?"block":"none"}} src="https://www.youtube.com/embed/r4u2ydFLbN4" 
+    title="Alps - best trip 2024" allow="accelerometer; autoplay" allowFullScreen>
+      
+    </iframe>
         <h1 className="text title text-center m-auto"> So, who I am? </h1>
         <div className="team-section wrapper">
           <div className="team-section_card max-w-sm w-full lg:max-w-full lg:flex">
