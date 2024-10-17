@@ -26,7 +26,7 @@ const FeedBackScreen = () => {
       comId: "021",
       fullName: "Derryl",
       text: "Excellent communication, quick completion of the task, great job done, 10/10 !",
-      avatarUrl: "https://ui-avatars.com/api/name=leon_sheff&background=random",
+      avatarUrl: "https://ui-avatars.com/api/name=Derryl&background=random",
       replies: [],
       }
   ];
