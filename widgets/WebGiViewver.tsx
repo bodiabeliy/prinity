@@ -6,7 +6,7 @@ import { AssetManagerBasicPopupPlugin, AssetManagerLoadingBarPlugin, AssetManage
 
 import { getIsLoaded3DModelSelector, setIsLoaded3DModel } from "@/providers/reducers/ScenesSlice";
 import { useDispatch, useSelector } from "react-redux";
-
+import preloaderImage from "@/public/animate logo.gif"
 
 const WebGiViewver = () => {
     const canvasRef =useRef<HTMLCanvasElement |any>(null)
@@ -43,7 +43,7 @@ const WebGiViewver = () => {
             s.showProgress = false
             s.showProgressStates = false
 
-            s.logoImage="https://3d-models-bodiabeliy.s3.amazonaws.com/animate+logo_1.gif"
+            s.logoImage="https://firebasestorage.googleapis.com/v0/b/d-portfolio-5d3cd.appspot.com/o/animate%20logo.gif?alt=media&token=fd9224b3-394a-493c-9293-3dd4f533c9e5"
             
             
             return s

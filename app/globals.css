@@ -359,6 +359,11 @@ nav .link-styled {
   height: 100vh;
 }
 
+.feedback-section.wrapper {
+
+  height: auto !important;
+}
+
 .benefits-section .body,
 .feedback-section .body {
   max-width: 1180px;
