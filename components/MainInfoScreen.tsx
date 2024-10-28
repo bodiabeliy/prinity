@@ -34,7 +34,7 @@ const MainInfoScreen = () => {
                    <div className="main-text">
                    <h1 className="text title">Let`s create future together!</h1> 
                    <span className="description">Making 3D visualization sweety houses for you!</span> 
-                   <button onClick={ExploreMore} className="button">More info</button>
+                   {/* <button onClick={ExploreMore} className="button">More info</button> */}
                    <iframe width={!mobilePhoto ?"640px":"0"} height="315" style={{display:!mobilePhoto ?"block":"none"}} src="https://www.youtube.com/embed/r4u2ydFLbN4" 
                       title="Alps - best trip 2024" allow="accelerometer; autoplay" allowFullScreen>
                     </iframe>

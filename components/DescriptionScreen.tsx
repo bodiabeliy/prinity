@@ -29,7 +29,7 @@ const DescriptionScreen = () => {
                             <span>Modern and Exclusive work approachies 😉</span>
                             </li>
                         </ul>
-                        <button onClick={() =>ExploreMore()} className="button"> Check portfolio</button>
+                        {/* <button onClick={() =>ExploreMore()} className="button"> Check portfolio</button> */}
 
                     </div> 
                 </div> 
