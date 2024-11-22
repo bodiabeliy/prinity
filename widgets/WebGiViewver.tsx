@@ -114,7 +114,7 @@ const WebGiViewver = () => {
 
     return ( 
         <>
-            <div id="webgi-canvas-container" className={!is3dModelLoaded?"splashScreenOpen":""} style={{transform:!is3dModelLoaded?"scale(2)":"scale(.5)", zIndex:-1, position:"absolute", top:0, left:0, bottom:0, right:0}}>
+            <div id="webgi-canvas-container" className={!is3dModelLoaded?"splashScreenOpen":""} style={{transform:!is3dModelLoaded?"scale(2)":"scale(.5)", zIndex:1}}>
                 <canvas id="webgi-canvas" ref={canvasRef} />
             </div>
         </>
