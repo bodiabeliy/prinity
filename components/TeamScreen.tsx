@@ -43,12 +43,11 @@ const TeamScreen = () => {
                 <ol>
                   <li>
                     <b>1) </b>I was engaged in development (near 4 years) of different kinds of
-                    web applications: from crm/Erp systems 
-                    to Outlook addon.
+                    web applications: from simple landpages to crm/Erp systems 
+                    and Outlook addon.
                   </li>
                   <li>
-                    <b>2) </b>Now, working at designing and visualization 3D
-                    projects ( using 3ds max)
+                    <b>2) </b>Now, working at designing, visualization and animation 3D projects
                   </li>
                 </ol>
                 <br />

@@ -14,21 +14,29 @@ const FeedBackScreen = () => {
       replies: [],
     },
     {
-    userId: "22b",
-    comId: "019",
-    fullName: "leon_sheff",
-    text: "Всё норм",
-    avatarUrl: "https://ui-avatars.com/api/name=leon_sheff&background=random",
-    replies: [],
-    },
-    {
       userId: "32b",
       comId: "021",
       fullName: "Derryl",
       text: "Excellent communication, quick completion of the task, great job done, 10/10 !",
       avatarUrl: "https://ui-avatars.com/api/name=Derryl&background=random",
       replies: [],
-      }
+    },
+    {
+      userId: "42b",
+      comId: "021",
+      fullName: "Derryl",
+      text: "Everything looks super, as it should!",
+      avatarUrl: "https://ui-avatars.com/api/name=Derryl&background=random",
+      replies: [],
+    },
+    {
+    userId: "22b",
+    comId: "019",
+    fullName: "leon_sheff",
+    text: "Відмінна робота!",
+    avatarUrl: "https://ui-avatars.com/api/name=leon_sheff&background=random",
+    replies: [],
+    }
   ];
   return (
     <>
