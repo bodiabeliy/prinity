@@ -2,6 +2,9 @@
 import React, { PureComponent } from "react";
 import { CommentSection } from "react-comments-section";
 import "react-comments-section/dist/index.css";
+import Alex from "@/public/Alex.jpg"
+import Deryl from "@/public/Derryl.jpg"
+import Kosta from "@/public/Konsta.png"
 
 const FeedBackScreen = () => {
   const data = [
@@ -22,18 +25,10 @@ const FeedBackScreen = () => {
       replies: [],
     },
     {
-      userId: "42b",
-      comId: "021",
-      fullName: "Derryl",
-      text: "Everything looks super, as it should!",
-      avatarUrl: "https://ui-avatars.com/api/name=Derryl&background=random",
-      replies: [],
-    },
-    {
     userId: "22b",
     comId: "019",
-    fullName: "leon_sheff",
-    text: "Відмінна робота!",
+    fullName: "lexweblab",
+    text: "Виглядає все супер - як треба було!",
     avatarUrl: "https://ui-avatars.com/api/name=leon_sheff&background=random",
     replies: [],
     }

@@ -51,14 +51,10 @@ const GLTFViewver = () => {
             </Canvas> */}
              <Carousel showArrows={true} >
               <div style={{height:"100vh"}}>
-              <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/hppWv?logo=1&info=1&fs=0&vr=0&thumbs=1"></iframe>
+              <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking" allowfullscreen scrolling="no" src="https://kuula.co/share/hppWv?logo=1&info=1&fs=0&vr=0&gyro=0&autorotate=1.14&thumbs=1"></iframe>
               </div>
-               
-                {/* <div style={{height:"100vh"}}>
-                <iframe class="ku-embed" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/hL4rD?logo=1&info=1&fs=0&vr=0&zoom=1&autorotate=0.24&thumbs=1&inst=0"></iframe>
-                </div> */}
                 <div style={{height:"100vh"}}>
-                <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/hLYdJ?logo=1&info=1&fs=0&vr=0&zoom=1&autorotate=0.24&thumbs=1&inst=0"></iframe>
+                <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking" allowfullscreen scrolling="no" src="https://kuula.co/share/hLYdJ?logo=1&info=1&fs=0&vr=0&zoom=1&autorotate=0.24&thumbs=1&inst=0"></iframe>
                 </div>
                 <div style={{height:"100vh"}}>
                 <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/5jzXL?logo=1&info=1&fs=1&vr=0&zoom=1&autorotate=0.24&thumbs=1"></iframe>
