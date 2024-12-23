@@ -3,8 +3,10 @@ import Image from "next/image";
 
 import mobilePhotoPortfolio from "@/public/portfolio-2-1.png";
 import desktopPhotoPortfolio from "@/public/portfolio-3.jpg";
-
 import Link from "next/link";
+import play from "@/public/play-3-1.png"
+import reels from "@/public/reels.png"
+
 
 const TeamScreen = () => {
   const mobilePhoto = window.matchMedia( '(max-width : 768px)').matches;
@@ -13,9 +15,21 @@ const TeamScreen = () => {
     <>
       <div className="team-section flex flex-col" id="team-section">
       <iframe width={mobilePhoto ?"100%":"0"} height="315" style={{display:mobilePhoto ?"block":"none"}} src="https://www.youtube.com/embed/r4u2ydFLbN4" 
-    title="Alps - best trip 2024" allow="accelerometer; autoplay" allowFullScreen>
-      
+        title="Alps - best trip 2024" allow="accelerometer; autoplay" allowFullScreen>
     </iframe>
+   {
+     mobilePhoto && <div>
+     <div className="rellsOverlay relative">
+     <Image className="reelsPreview" src={reels} alt="" />
+     <Image className="absolute sm:ml-none lg:ml-3 top-[15%] scale-50" src={play} alt="" />
+     <Link className={"absolute top-0 left-0 right-0 bottom-0"} href={"https://www.instagram.com/p/DDzarFNCtsj/"}></Link>
+
+     </div>
+   </div>
+   }
+    {/* <video width={mobilePhoto ?"100%":"0"} height="600px" controls loop style={{display:mobilePhoto ?"block":"none"}}  src="https://firebasestorage.googleapis.com/v0/b/d-portfolio-5d3cd.appspot.com/o/terrain_ready.mp4?alt=media&token=a2cd4ffc-30b7-4cff-925a-00b58d51ac0c" 
+        title="Nowy Targ" >
+    </video> */}
         <h1 className="text title text-center m-auto"> So, who I am? </h1>
         <div className="team-section wrapper">
           <div className="team-section_card max-w-sm w-full lg:max-w-full lg:flex">
