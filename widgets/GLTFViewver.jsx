@@ -61,11 +61,11 @@ const GLTFViewver = () => {
                 <div style={{height:"100vh"}}>
                 <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/5jzXL?logo=1&info=1&fs=1&vr=0&zoom=1&autorotate=0.24&thumbs=1"></iframe>
                 </div>
-                 
+{/*                  
                    <video width={!isMobile?"100%":"0"} height={!isMobile?"100%":"0"} autoplay controls poster={"https://firebasestorage.googleapis.com/v0/b/d-portfolio-5d3cd.appspot.com/o/videoPreloader.png?alt=media&token=b7c56136-7461-449d-82ef-480bdec41f74"}>
                    {!isMobile &&  <source src="https://firebasestorage.googleapis.com/v0/b/d-portfolio-5d3cd.appspot.com/o/terrain.mp4?alt=media&token=87e356a6-e775-426a-bc2b-cd83e720ac6e" type="video/mp4" />}
                 </video>
-                
+                 */}
               
                 <div style={{height:"100vh"}}>
                 <iframe width="100%" height="100%" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/5jBfK?logo=1&info=1&fs=0&vr=0&zoom=1&autorotate=0.24&thumbs=1&inst=0"></iframe>
